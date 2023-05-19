@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="css_day.css">
+    <style>
+        .LegendsGrid{
+            width: 1024px;
+            display: grid;
+            grid-template-areas: 
+            "BestP BestP"
+            "RR RRD"            
+            "THD TH"
+            "HR HR"
+            "LGD LGD"
+            "KK KKD"
+            "ZID ZI"
+            "SV SVD"
+            "PMD PM";
+            grid-template-columns: 45% 45%;
+            grid-gap: 40px;
+        }
+        .LegendsGrid img{
+            width:500px;
+        }
+        .BestP{
+            text-align: center;
+        }
+
+        @media (max-width:1024px){
+            .LegendsGrid{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 450px;
+                grid-gap: 0;
+            }
+            .LegendsGrid img{
+                width: 300px;
+                margin-top: 30px;
+            }
+            .nNum{
+                font-size: 40px;
+            }
+            .nName{
+                font-size: 20px;
+                margin-top: 10px;
+            }
+            article{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    <title>#WEAREACMILAN</title>
+</head>
+<body>
+    <script>
+        var darkMode = localStorage["darkMode"];
+        var darkModeToggle = document.getElementsByClassName('darkModeToggle');
+
+        if (darkMode === "enabled") {
+            document.body.classList.add("dark-Mode");
+            localStorage["darkMode"] = 'enabled';        
+        }
+    </script>
+    <div class="outer">
+        <header>
+            <h1>
+                <span class="h_black">#</span>
+                <span style="color:rgb(170, 0, 0);">WE</span>
+                <span class="h_black">ARE</span>
+                <span style="color:rgb(170, 0, 0);">AC</span>
+                <span class="h_black">MILAN</span>
+            </h1>
+            <div></div>
+        </header>
+
+        <league_table>
+            <script src="https://footballnation.eu/ranking.min.js" async></script>
+            <a href="https://footballnation.eu/" data-league="serie-a" data-lang="en" data-style="none"></a>
+        </league_table>
+
+        <aside>
+            <img src="http://placehold.it/200x500">
+        </aside>
+
+        <nav class="nav_top">
+            <script src="main_js.js"></script>
+            <a class="nav" href="main.html" target="_self"><button class="nav1">Home</button></a>
+            <a class="nav" href="History.html" target="_self"><button class="nav1">History</button></a>
+            <a class="nav" href="Achievements.html" target="_self"><button class="nav1">Achievements</button></a>
+            <a class="nav" href="Stadium.html" target="_self"><button class="nav1">Stadium</button></a>
+            <a class="nav" href="Legends.html" target="_self"><button class="nav1" id="current_page">Legends</button></a>
+            <button class="darkModeToggle">Day</button>
+        </nav>
+
+        <section>
+            <article>
+                <h2>MY FAVORITE PLAYERS & LEGENDS</h2>
+                <hr style="width:100%">
+                <div class="LegendsGrid">
+                    <div style="grid-area: BestP;"><h2>BestPlayer</h2></div>
+                    
+                    <div style="grid-area: RR;"><img src="./legends-img/BP1.webp"></div>
+                    <div style="grid-area: RRD;" class="pRn">
+                        <p class="nName">RAFAEL LEAO</p>
+                        <p class="nNum">17</p>
+                    </div>
+                    
+                    <div style="grid-area: TH"><img src="./legends-img/BP2.jpg"></div>
+                    <div style="grid-area: THD;" class="pLn">
+                        <p class="nName">THEO HERNANDEZ</p>
+                        <p class="nNum">19</p>
+                    </div>
+                    <hr style="width:100%; grid-area: HR;">
+                    
+                    <div style="grid-area: LGD"><h2>LEGENDS</h2></div>
+                    
+                    <div style="grid-area: KK;"><img src="./legends-img/kaka.jpg"></div>
+                    <div style="grid-area: KKD;" class="pRn">
+                        <p class="nName">KAKA'</p>
+                        <p class="nNum">22</p>
+                    </div>
+                    
+                    <div style="grid-area: ZI;"><img src="./legends-img/zlatan.webp"></div>
+                    <div style="grid-area: ZID;" class="pLn">
+                        <p class="nName">ZLATAN IBRAHIMOVIC</p>
+                        <p class="nNum">11</p>
+                    </div>
+                    
+                    <div style="grid-area: SV;"><img src="./legends-img/AS.webp"></div>
+                    <div style="grid-area: SVD;" class="pRn">
+                        <p class="nName">ANDRIY SHEVCHENKO</p>
+                        <p class="nNum">7</p>
+                    </div>
+
+                    <div style="grid-area: PM;"><img src="./legends-img/PM.jpg"></div>
+                    <div style="grid-area: PMD;" class="pLn">
+                        <p class="nName">PAOLO MALDINI</p>
+                        <p class="nNum">3</p>
+                    </div>
+                    
+                </div>
+            </article>
+        </section>        
+    </div>
+    <hr>
+
+    <footer>
+        화면구현 HTML5 CSS3 JavaScript<br>
+        박상탁
+    </footer>
+
+    <nav class="nav_bottom">
+        <a class="nav" href="main.html" target="_self"><button class="nav1">Home</button></a>
+        <a class="nav" href="History.html" target="_self"><button class="nav1">History</button></a>
+        <a class="nav" href="Achievements.html" target="_self"><button class="nav1">Achievements</button></a>
+        <a class="nav" href="Stadium.html" target="_self"><button class="nav1">Stadium</button></a>
+        <a class="nav" href="Legends.html" target="_self"><button class="nav1" id="current_page">Legends</button></a>
+        <button class="darkModeToggle">Day</button>
+    </nav>
+    <script src="main_js.js"></script>
+</body>
+</html>

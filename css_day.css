@@ -1,0 +1,306 @@
+body{
+    background-color: transparent;
+}
+
+div.outer{
+    display: grid;
+    grid-template-columns: 200px 1024 200px;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 30px;
+}
+header{
+    grid-column: 1 / 4;
+    grid-row: 1;
+    text-align: center;
+    height: auto;
+}
+
+header div{
+    height: 5px;
+    background: linear-gradient(90deg, rgb(170, 0, 0) 50%, #2E2E2E 50%);
+    background-size: 25%;
+}
+header h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+header span{
+    margin: 0px -8px 0px -8px;
+}
+
+
+
+nav{
+    grid-column: 1 / 4;
+    grid-row : 2;
+    background: white;
+    border-bottom: solid 1px;
+    border-top: solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav.nav_top{
+    position: sticky;
+    top:0px;
+}
+nav.nav_bottom{
+    display: none;
+}
+nav button{
+    border-style: hidden;
+    font-weight: bolder;
+    width: 100px;
+    height: 40px;
+    margin:3px auto;
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+}
+nav button:hover{
+    box-shadow: 0px 0px 1px;
+}
+nav button:active{
+    box-shadow: 0px 0px 3px;
+}
+a.nav{
+    text-decoration: none;
+    color:black;
+}
+.darkModeToggle{
+    text-align: center;
+    width: 50px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 2px;
+    margin: 10px;
+}
+#current_page{
+    color: rgb(170, 0, 0);
+    font-weight: bolder;
+    background-color: transparent;
+    border-bottom: 2px solid rgb(170, 0, 0);
+}
+
+league_table{
+    grid-column: 1;
+    grid-row: 3;
+    overflow: hidden;
+    width : 200px;
+    height: 800px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+league_table a{
+    text-decoration-line: none;
+    color:inherit;
+}
+
+section{
+    grid-column: 2 / 3;
+    grid-row: 3;
+    width: 1024px;
+    text-align: center;
+}
+section h2{
+    color: black;
+    font-size: 50px;
+    line-height: 80px;
+    display: inline;
+    padding: 0;
+}
+section h4{
+    color: black;
+    display: inline;
+    line-height: 100px;
+    margin-top: 50px;
+}
+article{
+    height: 100%;
+    padding: 0;
+}
+p.ct{
+    justify-self: center;   
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+article img{
+    width: 100%;
+}
+article pre{
+    text-align: left; 
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.Achievements{
+    width: 767px;
+    margin: 0 auto 0 auto;
+}
+.Achievements .cupTitle{
+    font-size: 30px;
+    font-weight: bolder;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 20px;
+}
+.Achievements .won{
+    font-size: 90px;
+    font-weight: bolder;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    color: rgb(170, 0, 0);
+}
+.nName{
+    font-size: 30px;
+    font-weight: bolder;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* margin-top: 30px; */
+}
+.nNum{
+    font-size: 90px;
+    font-weight: bolder;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    color: rgb(170, 0, 0);
+}
+.pRn{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-left: 40px;
+}
+.pLn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+article h2{
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 20px;
+}
+article pre{
+    white-space: pre-wrap;
+}
+aside{
+    grid-column: 3 / 4;
+    grid-row: 3;
+}
+aside img{
+    object-fit: cover;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    border-style: hidden;
+    text-align: center;
+    background-color: #222222;
+    color: white;
+    padding-top: 20px;
+}
+
+.dark-Mode{
+    background-color: black;
+    color: white;
+}
+.dark-Mode nav{
+    border-bottom: solid 1px black;
+    border-top: solid 1px black;
+    background: #3d3d3d;
+}
+.dark-Mode button {
+    color: white;
+    background-color: #3d3d3d;
+}
+.dark-Mode #current_page{
+    color: white;
+    font-weight: bolder;
+    background-color: rgb(48, 48, 48);
+    border-bottom: 2px solid white;
+}
+.dark-Mode .div_gird{
+    border: 1px solid black;
+}
+.dark-Mode league_table{
+    background-color: #2E2E2E;
+}
+.dark-Mode section{
+    background-color: black;
+}
+.dark-Mode section h2{
+    color: white;
+}
+.dark-Mode section h4{
+    color: white;
+}
+.h_black .dark-Mode{
+    color: white;
+}
+
+
+
+@media(max-width:1023px){
+    header{
+        height: auto;
+    }
+    header div{
+        height: 5px;
+    }
+    header h1{
+        margin : 10px;
+        padding: 5px;
+    }
+    league_table{
+        display: none;
+    }
+    aside{
+        display: none;
+
+    }
+    nav{
+        margin : 0 auto;
+        width: 100%;
+    }
+    section{
+        width: 767px;
+        margin: 0px;
+    }
+}
+
+@media(max-width:767px){
+    header h1{
+        font-size: 40px;
+    }
+    header div{
+        height: 5px;
+    }
+    section{
+        width:450px;
+    }
+    section h2{
+        font-size: 30px;
+        margin: 30px auto 20px auto;
+    }
+    nav.nav_top{
+        display: none;
+    }
+    nav.nav_bottom{
+        display: flex;
+        position: fixed;
+        bottom:0px;
+    }
+    nav button{
+        width:auto;
+        margin: 0 auto;
+    }
+    .darkModeToggle{
+        margin:10px;
+    }
+    article img{
+        float:none;
+        display: table;
+        margin: 10px auto 10px auto;
+    }
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="css_day.css" >
+    <style>
+        .Achievements{
+            display: grid; 
+            grid-template-columns: 400px auto;
+            grid-template-rows: auto;
+            margin-top:30px;
+            grid-gap: 20px;
+        }
+
+        @media (max-width:767px){
+            .Achievements{
+                width: 450px;
+                grid-template-columns: 200px 230px;
+            }
+            .Achievements .cupTitle{
+                font-size: 20px;
+                margin-left: -30px;
+            }
+            
+            .Achievements .won{
+                font-size: 50px;
+                margin-left: -30px;
+                margin-top: -10px;
+            }
+        }
+    </style>
+    <title>#WEAREACMILAN</title>
+</head>
+<body>
+    <script>
+        var darkMode = localStorage["darkMode"];
+        var darkModeToggle = document.getElementsByClassName('darkModeToggle');
+
+        if (darkMode === "enabled") {
+        document.body.classList.add("dark-Mode");
+        localStorage["darkMode"] = 'enabled';
+        }
+    </script>
+    <div class="outer">
+        <header>
+            <h1>
+                <span class="h_black">#</span>
+                <span style="color:rgb(170, 0, 0);">WE</span>
+                <span class="h_black">ARE</span>
+                <span style="color:rgb(170, 0, 0);">AC</span>
+                <span class="h_black">MILAN</span>
+            </h1>
+            <div></div>
+        </header>
+        <league_table>
+            <script src="https://footballnation.eu/ranking.min.js" async></script>
+<a href="https://footballnation.eu/" data-league="serie-a" data-lang="en" data-style="none"></a>
+        </league_table>
+        <aside>
+            <img src="http://placehold.it/200x500">
+        </aside>
+        <nav class="nav_top">
+            <a class="nav" href="main.html" target="_self"><button class="nav1">Home</button></a>
+            <a class="nav" href="History.html" target="_self"><button class="nav1">History</button></a>
+            <a class="nav" href="Achievements.html" target="_self"><button class="nav1" id="current_page">Achievements</button></a>
+            <a class="nav" href="Stadium.html" target="_self"><button class="nav1">Stadium</button></a>
+            <a class="nav" href="Legends.html" target="_self"><button class="nav1">Legends</button></a>
+            <button class="darkModeToggle">Day</button>
+        </nav>
+        <section>
+            <article>
+                <h2>ACHIEVEMENTS</h2>
+                <hr>
+                <img src="./achievements-img/Landing-FAQ-Museo.webp">
+                </p>
+                <hr>
+                <div class="Achievements">
+                    <div class="UCL" style="grid-column: 1; grid-row: 1;"><img src="./achievements-img/Lista-ChampionsLeague.webp"></div>
+                    <div style="grid-column: 2; grid-row: 1;">
+                        <p class="cupTitle">CHAMPIONS LEAGUE</p>
+                        <p class="won">7</p>
+                    </div>
+                    <div class="League" style="grid-column: 1; grid-row: 2;"><img src="./achievements-img/Lista-Scudetto.webp"></div>
+                    <div style="grid-column: 2; grid-row: 2;">
+                        <p class="cupTitle">LIGA SERIE A</p>
+                        <p class="won">19</p>
+                    </div>
+                    <div class="CW" style="grid-column: 1; grid-row: 3;"><img src="./achievements-img/Lista-FifaClubWorldCup.webp"></div>
+                    <div style="grid-column: 2; grid-row: 3;">
+                        <p class="cupTitle">FIFA CLUB WORLD CUP</p>
+                        <p class="won">1</p>
+                    </div>
+                    <div class="IC" style="grid-column: 1; grid-row: 4;"><img src="./achievements-img/Lista-CoppaIntercontinentale.webp"></div>
+                    <div style="grid-column: 2; grid-row: 4;">
+                        <p class="cupTitle">INTERCONTINENTAL CUP</p>
+                        <p class="won">3</p>
+                    </div>
+                    <div class="ES" style="grid-column: 1; grid-row: 5;"><img src="./achievements-img/Lista-SupercoppaEuropea.webp"></div>
+                    <div style="grid-column: 2; grid-row: 5;">
+                        <p class="cupTitle">EUROPEAN SUPER CUP</p>
+                        <p class="won">5</p>
+                    </div>
+                    <div class="Winners" style="grid-column: 1; grid-row: 6;"><img src="./achievements-img/Lista-CoppaDelleCoppe.webp"></div>
+                    <div style="grid-column: 2; grid-row: 6;">
+                        <p class="cupTitle">CUP WINNERS' CUP</p>
+                        <p class="won">2</p>
+                    </div>
+                    <div class="CI" style="grid-column: 1; grid-row: 7;"><img src="./achievements-img/Lista-CoppaItalia.webp"></div>
+                    <div style="grid-column: 2; grid-row: 7;">
+                        <p class="cupTitle">COPPA ITALIA</p>
+                        <p class="won">5</p>
+                    </div>
+                    <div class="IS" style="grid-column: 1; grid-row: 8;"><img src="./achievements-img/Lista-SupercoppaItaliana.webp"></div>
+                    <div style="grid-column: 2; grid-row: 8;">
+                        <p class="cupTitle">ITALIAN SUPERCUP</p>
+                        <p class="won">7</p>
+                    </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+    <hr>
+
+    <footer>
+        화면구현 HTML5 CSS3 JavaScript<br>
+        박상탁
+    </footer>
+
+    <nav class="nav_bottom">
+        <a class="nav" href="main.html" target="_self"><button class="nav1">Home</button></a>
+        <a class="nav" href="History.html" target="_self"><button class="nav1">History</button></a>
+        <a class="nav" href="Achievements.html" target="_self"><button class="nav1" id="current_page">Achievements</button></a>
+        <a class="nav" href="Stadium.html" target="_self"><button class="nav1">Stadium</button></a>
+        <a class="nav" href="Legends.html" target="_self"><button class="nav1">Legends</button></a>
+        <button class="darkModeToggle">Day</button>
+    </nav>
+    <script src="main_js.js"></script>
+</body>
+</html>
